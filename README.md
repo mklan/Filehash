@@ -15,6 +15,7 @@ to generate a hash of a file object use the `hash(file, algorithm)` method, whic
 
 ```javascript
 var file = new File(["hello there!"], "file.txt");
+
 Filehash.hash(file).then(function (result) {
   console.log('hash:', result);
 });
