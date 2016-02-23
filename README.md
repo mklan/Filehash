@@ -25,7 +25,7 @@ with the `compare(file, hash, algorithm)` method you can check if a specific has
 
 ```javascript
 var file = new File(["hello there!"], "file.txt");
-hash = 'c69509590d81db2f37f9d75480c8efedf79a77933db5a8319e52e13bfd9874a3';
+var hash = 'c69509590d81db2f37f9d75480c8efedf79a77933db5a8319e52e13bfd9874a3';
 
 Filehash.compare(file, hash).then(function (result) {
   console.log('hash check:', result);
