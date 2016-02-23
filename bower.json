@@ -1,0 +1,27 @@
+{
+  "name": "Filehash",
+  "homepage": "https://github.com/vaceta/Filehash",
+  "authors": [
+    "Matthias Klan <matthias.klan@gmail.com>"
+  ],
+  "description": "hashing files client side",
+  "main": "dist/filehash.js",
+  "moduleType": [],
+  "keywords": [
+    "hash",
+    "file",
+    "client",
+    "js",
+    "vanilla"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "chai": "^3.5.0"
+  }
+}
