@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Filehash by matthiasklan</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Filehash</h1>
+        <p>javascript client-side file hashing</p>
+
+        <p class="view"><a href="https://github.com/matthiasklan/Filehash">View the Project on GitHub <small>matthiasklan/Filehash</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/matthiasklan/Filehash/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/matthiasklan/Filehash/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/matthiasklan/Filehash">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="filehash" class="anchor" href="#filehash" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Filehash</h1>
+
+<p>a javascript client-side file hashing</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Include the script in your project</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>/path/to/filehash.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>to generate a hash of a file object use the <code>hash(file, algorithm)</code> method, which will return a promise once completed. the algorithm parameter is optional. <code>sha-256</code> is used as default.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> file <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">File</span>([<span class="pl-s"><span class="pl-pds">"</span>hello there!<span class="pl-pds">"</span></span>], <span class="pl-s"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>);
+
+<span class="pl-smi">Filehash</span>.<span class="pl-c1">hash</span>(file).<span class="pl-en">then</span>(<span class="pl-k">function</span> (<span class="pl-smi">result</span>) {
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>hash:<span class="pl-pds">'</span></span>, result);
+});</pre></div>
+
+<p>with the <code>compare(file, hash, algorithm)</code> method you can check if a specific hash belongs to a file. the algorithm parameter is here optional, too. <code>sha-256</code> is used as default.</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> file <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">File</span>([<span class="pl-s"><span class="pl-pds">"</span>hello there!<span class="pl-pds">"</span></span>], <span class="pl-s"><span class="pl-pds">"</span>file.txt<span class="pl-pds">"</span></span>);
+<span class="pl-k">var</span> hash <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">'</span>c69509590d81db2f37f9d75480c8efedf79a77933db5a8319e52e13bfd9874a3<span class="pl-pds">'</span></span>;
+
+<span class="pl-smi">Filehash</span>.<span class="pl-en">compare</span>(file, hash).<span class="pl-en">then</span>(<span class="pl-k">function</span> (<span class="pl-smi">result</span>) {
+  <span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-s"><span class="pl-pds">'</span>hash check:<span class="pl-pds">'</span></span>, result);
+});</pre></div>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Author</h2>
+
+<p><a href="https://github.com/vaceta/">Matthias Klan</a></p>
+
+<p>contact: <a href="mailto:matthias.klan@gmail.com">matthias.klan@gmail.com</a> </p>
+
+<h2>
+<a id="licence" class="anchor" href="#licence" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Licence</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2015 Matthias Klan</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the "Software"), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/matthiasklan">matthiasklan</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
