@@ -3,7 +3,19 @@ a javascript client-side file hashing
 
 ## Installation
 
-Include the script in your project
+`npm install mediacropper`
+
+and
+import it using ES6 via
+
+```javascript
+import 'filehash';
+const Filehash = window['Filehash'];
+```
+
+or
+
+include the script in your project the old fashion way
 
 ```html
 <script src="/path/to/filehash.js"></script>
