@@ -3,7 +3,7 @@ a javascript client-side file hashing
 
 ## Installation
 
-`npm install mediacropper`
+`npm install filehash`
 
 and
 import it using ES6 via
